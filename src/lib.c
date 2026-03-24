@@ -62,7 +62,7 @@ void push_cidr(lua_State *L, const char *which, int family,
 void push_hwaddr(lua_State *L, const char *which,
 			const struct nlattr *attr)
 {
-	uint8_t *hwaddr = mnl_attr_get_payload(attr);
+	const uint8_t *hwaddr = mnl_attr_get_payload(attr);
 	char addr[20], *p = addr;
 	int i, max = mnl_attr_get_payload_len(attr);
 
