@@ -133,7 +133,7 @@ static int nlfunc_groups(lua_State *L)
 {
 	int j = 1;
 	struct rtmgrp *rtmgrp;
-	struct userdata *userdata = get_userdata(L);
+	const struct userdata *userdata = get_userdata(L);
 
 	lua_newtable(L);
 
